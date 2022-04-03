@@ -2,6 +2,7 @@ package lab.lab4;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
@@ -15,7 +16,7 @@ public class Main extends Application {
         Scene scene = new Scene(fxmlLoader.load(), 800, 600);
         stage.setTitle("Wczytywanie XML");
 
-        Controller controller = new Controller();
+        Controller controller = fxmlLoader.getController();
 
         stage.setMinHeight(639);
         stage.setMaxHeight(639);
